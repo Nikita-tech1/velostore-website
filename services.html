@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог и Услуги — ВелоСтрана</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">🚲 <span>ВелоСтрана</span></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html" class="active">Каталог и Услуги</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Каталог и Услуги</h1>
+                <p>Продажа велосипедов и профессиональное техническое обслуживание</p>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="container">
+                
+                <!-- Поле живого поиска -->
+                <div class="search-box" style="max-width: 400px; margin: 0 auto 20px auto;">
+                    <input type="text" id="catalog-search" placeholder="🔍 Поиск велосипеда или услуги..." 
+                           style="width: 100%; padding: 12px 16px; border: 2px solid #ddd; border-radius: 8px; font-size: 15px; outline: none; transition: border-color 0.3s;">
+                </div>
+
+                <!-- Блок кнопок фильтрации -->
+                <div class="filter-buttons">
+                    <button class="btn-filter active" data-category="">Все</button>
+                    <button class="btn-filter" data-category="bikes">Велосипеды</button>
+                    <button class="btn-filter" data-category="services">Услуги</button>
+                </div>
+
+                <ul id="services-grid" class="services-grid"></ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 «ВелоСтрана». Все права защищены.</p>
+            <p class="demo-note">Учебный проект интернет-магазина</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <!-- Модальное окно быстрого заказа -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <h2>Быстрый заказ</h2>
+            <p>Вы выбрали: <strong id="modal-product-title"></strong></p>
+            
+            <form id="modal-order-form">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label for="modal-name" style="display:block; margin-bottom: 5px;">Ваше имя:</label>
+                    <input type="text" id="modal-name" required placeholder="Введите ваше имя" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label for="modal-phone" style="display:block; margin-bottom: 5px;">Телефон:</label>
+                    <input type="tel" id="modal-phone" required placeholder="+7 (999) 000-00-00" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Подтвердить заказ</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

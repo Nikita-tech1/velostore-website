@@ -1,0 +1,643 @@
+/* Базовые сбросы и шрифты */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка сайта (Header) */
+.header {
+    background-color: #1c1e21;
+    color: #fff;
+    padding: 18px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff5722; /* Велосипедный фирменный оранжевый акцент */
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav a {
+    color: #b0b3b8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #ff5722;
+}
+
+/* Основной контент и Баннер (Hero) */
+.main-content {
+    flex: 1;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?q=80&w=1200') center/cover no-repeat;
+    color: #fff;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 28px;
+    color: #e4e6eb;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #e04818;
+}
+
+/* Подвал (Footer) */
+.footer {
+    background-color: #1c1e21;
+    color: #90949c;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+}
+/* Общие заголовки секций */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1c1e21;
+}
+
+/* Секция преимуществ */
+.features {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1c1e21;
+}
+
+.feature-card p {
+    color: #6c757d;
+    font-size: 15px;
+}
+
+/* Секция категорий */
+.categories {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.category-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #1c1e21;
+}
+
+.category-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.card-link {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+/* Стили для внутренних страниц */
+.page-header {
+    background-color: #1c1e21;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #2d3035;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: #b0b3b8;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Секция "О нас" */
+.about-info {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: #1c1e21;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    color: #4b4f56;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ff5722;
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #ff5722;
+    margin-bottom: 4px;
+}
+
+.stat-card p {
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Подпись для учебного проекта */
+.demo-note {
+    font-size: 13px;
+    color: #ff5722;
+    margin-top: 6px;
+    font-style: italic;
+}
+/* Стили каталога и услуг */
+.services-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid #e9ecef;
+}
+
+.card-badge {
+    align-self: flex-start;
+    background-color: #fff3e0;
+    color: #ff5722;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    color: #1c1e21;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f3f5;
+    padding-top: 16px;
+}
+
+.card-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c1e21;
+}
+
+.btn-sm {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-sm:hover {
+    background-color: #e04818;
+}
+
+.loading, .error {
+    text-align: center;
+    grid-column: 1 / -1;
+    font-size: 18px;
+    color: #6c757d;
+    padding: 40px 0;
+}
+/* Стили для страницы новостей */
+.news-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.news-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    border: 1px solid #e9ecef;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #ff5722;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.news-card h3 {
+    font-size: 20px;
+    color: #1c1e21;
+    margin-bottom: 12px;
+}
+
+.news-card p {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+/* Стили для страницы контактов */
+.contacts-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.contact-info h2, .contact-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    color: #1c1e21;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    font-size: 24px;
+    background-color: #fff3e0;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 1;
+}
+
+.info-item h4 {
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.info-item p, .info-item a {
+    color: #6c757d;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: #ff5722;
+}
+
+/* Стили формы */
+.contact-form-container {
+    background-color: #f8f9fa;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+/* Карта */
+.map-section {
+    padding: 40px 0 60px;
+    background-color: #f8f9fa;
+}
+
+.map-section h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.map-placeholder {
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 12px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #495057;
+}
+
+.map-placeholder p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Стили для изображений */
+.page-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-wrapper {
+    margin-top: 30px;
+    text-align: center;
+}
+/* --- СТИЛИ ДЛЯ КНОПОК ФИЛЬТРАЦИИ --- */
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.btn-filter {
+    padding: 10px 22px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.btn-filter:hover {
+    border-color: #ff5722;
+    color: #ff5722;
+    transform: translateY(-2px);
+}
+
+.btn-filter.active {
+    background-color: #ff5722;
+    border-color: #ff5722;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+/* --- СТИЛИ МОДАЛЬНОГО ОКНА --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+#modal-product-title {
+    color: #ff5722;
+}

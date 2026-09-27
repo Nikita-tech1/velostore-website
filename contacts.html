@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — ВелоСтрана</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">🚲 <span>ВелоСтрана</span></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Каталог и Услуги</a></li>
+                    <li><a href="news.html">Новости</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Свяжитесь с нами</h1>
+                <p>Мы всегда рады ответить на ваши вопросы и помочь с выбором велосипеда или сервисом</p>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="container contacts-grid">
+                
+                <!-- Контактные данные -->
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Адрес салона и мастерской:</h4>
+                            <p>г. Екатеринбург, ул. Ленина, д. 45</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Телефон:</h4>
+                            <p><a href="tel:+78005553535">+7 (800) 555-35-35</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Электронная почта:</h4>
+                            <p><a href="mailto:info@velostrana.ru">info@velostrana.ru</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>Режим работы:</h4>
+                            <p>Пн–Пт: с 10:00 до 20:00<br>Сб–Вс: с 10:00 до 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="contact-form-container">
+                    <h2>Написать нам</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ваше имя *</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+
+                        <!-- ИСПРАВЛЕННЫЙ БЛОК: Поле E-mail по методичке ЛР №1 и №3 -->
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Тема обращения</label>
+                            <select id="subject" name="subject">
+                                <option value="покупка">Покупка велосипеда / аксессуаров</option>
+                                <option value="сервис">Запись на ТО / Ремонт</option>
+                                <option value="вопрос">Общий вопрос</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Сообщение *</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Опишите ваш вопрос или заявку..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Отправить сообщение</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Секция карты -->
+        <section class="map-section">
+            <div class="container">
+                <h2>Мы на карте</h2>
+                <div class="map-placeholder">
+                    <p>📍 г. Екатеринбург, ул. Ленина, д. 45</p>
+                    <small>(Здесь располагается интерактивная карта Яндекс / Google)</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 «ВелоСтрана». Все права защищены.</p>
+            <p class="demo-note">Учебный проект интернет-магазина</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

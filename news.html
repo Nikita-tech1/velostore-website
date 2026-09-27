@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости — ВелоСтрана</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта (Header) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">🚲 <span>ВелоСтрана</span></a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Каталог и Услуги</a></li>
+                    <li><a href="news.html" class="active">Новости</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1>Новости и Акции</h1>
+                <p>События компании, полезные статьи и специальные предложения</p>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <!-- Контейнер для вывода новостей из JSON -->
+                <div id="news-grid" class="news-grid">
+                    <p class="loading">Загрузка новостей...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал сайта (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 «ВелоСтрана». Все права защищены.</p>
+            <p class="demo-note">Учебный проект интернет-магазина</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
